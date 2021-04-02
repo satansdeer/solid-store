@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { MatchRoute, Link } from "@rturnq/solid-router";
+import { Switch } from "solid-js";
+import { Home } from "./Home"
 
-function App() {
+const Checkout = () => {
   return (
-    <div class="App">
-      <header class="App-header">
-        <img src={logo} class="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class="App-link"
-          href="https://github.com/ryansolid/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div>
+    <>
+      Checkout
+      <Link href="/">Go home</Link>
+    </>
+  );
+};
+
+export function App() {
+  return (
+    <Switch>
+      <MatchRoute end path="/">
+        <Home />
+      </MatchRoute>
+      <MatchRoute path="/checkout">
+        <Checkout />
+      </MatchRoute>
+    </Switch>
   );
 }
-
-export default App;

@@ -9,7 +9,9 @@
     "solid-scripts": "0.0.55",
     "typescript": "4.2.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@rturnq/solid-router": "^0.2.5"
+  },
   "scripts": {
     "start": "solid-scripts start",
     "build": "solid-scripts build",
